@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Here are my top 5 current NBA Players:</p>
+<ol class="d-flex justify-content-evenly">
+    {% for player in players %}
+        <li>{{ player }}</li>
+    {% endfor %}
+</ol>
+<a class="btn btn-danger  w-50 mt-5" href="{{ url_for('index') }}">Click here to go back home!</a>
+{% endblock %}
